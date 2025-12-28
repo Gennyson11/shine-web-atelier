@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <div className="container flex h-16 items-center justify-center">
         <div className="flex items-center gap-2">
           <HeartIcon size={32} />
-          <span className="text-xl font-bold text-foreground">Lovaly.dev</span>
+          <span className="text-xl font-bold text-foreground">lovablecreditos</span>
         </div>
       </div>
     </header>
