@@ -1,0 +1,79 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import HeartIcon from "./HeartIcon";
+
+interface OfferCardProps {
+  credits: number;
+  baseCredits: number;
+  bonusCredits: number;
+  originalPrice: number;
+  discountedPrice: number;
+  discountPercentage: number;
+  pricePerCredit: number;
+  index: number;
+}
+
+const OfferCard: React.FC<OfferCardProps> = ({
+  credits,
+  baseCredits,
+  bonusCredits,
+  originalPrice,
+  discountedPrice,
+  discountPercentage,
+  pricePerCredit,
+  index,
+}) => {
+  return (
+    <div 
+      className="relative gradient-card rounded-2xl border border-primary/10 p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      {/* Offer Badge */}
+      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+        <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+          Oferta
+        </span>
+      </div>
+
+      <div className="flex flex-col items-center pt-4">
+        {/* Heart Icon */}
+        <div className="mb-4 animate-float">
+          <HeartIcon size={40} />
+        </div>
+
+        {/* Credits */}
+        <div className="text-4xl font-extrabold text-foreground mb-1">
+          {credits}
+        </div>
+        <div className="text-sm text-muted-foreground mb-1">créditos</div>
+        <div className="text-xs text-primary font-medium mb-4">
+          ({baseCredits} + {bonusCredits} bônus)
+        </div>
+
+        {/* Pricing */}
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-sm text-muted-foreground line-through">
+            R$ {originalPrice}
+          </span>
+          <span className="bg-success text-primary-foreground text-xs font-bold px-2 py-0.5 rounded">
+            -{discountPercentage}%
+          </span>
+        </div>
+        
+        <div className="text-3xl font-bold text-foreground mb-1">
+          R$ {discountedPrice}
+        </div>
+        <div className="text-xs text-muted-foreground mb-6">
+          R$ {pricePerCredit.toFixed(2)}/crédito
+        </div>
+
+        {/* CTA Button */}
+        <Button variant="offer" className="w-full" size="lg">
+          Garantir!
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default OfferCard;
