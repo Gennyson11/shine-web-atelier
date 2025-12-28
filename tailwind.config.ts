@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -63,12 +63,13 @@ export default {
         purple: {
           DEFAULT: "hsl(var(--purple))",
           light: "hsl(var(--purple-light))",
+          dark: "hsl(var(--purple-dark))",
         },
         pink: {
           DEFAULT: "hsl(var(--pink))",
           light: "hsl(var(--pink-light))",
         },
-        coral: "hsl(var(--coral))",
+        violet: "hsl(var(--violet))",
         success: {
           DEFAULT: "hsl(var(--success))",
           light: "hsl(var(--success-light))",
@@ -104,10 +105,11 @@ export default {
         "scale-in": "scale-in 0.3s ease-out forwards",
       },
       boxShadow: {
-        "card": "0 4px 20px -2px hsl(var(--primary) / 0.1)",
-        "card-hover": "0 8px 30px -4px hsl(var(--primary) / 0.2)",
-        "button": "0 4px 14px -2px hsl(var(--primary) / 0.4)",
-        "button-hover": "0 6px 20px -2px hsl(var(--primary) / 0.5)",
+        "card": "0 4px 20px -2px hsl(var(--primary) / 0.15)",
+        "card-hover": "0 8px 40px -4px hsl(var(--primary) / 0.3)",
+        "button": "0 4px 20px -2px hsl(var(--primary) / 0.5)",
+        "button-hover": "0 6px 30px -2px hsl(var(--primary) / 0.6)",
+        "glow": "0 0 40px hsl(var(--primary) / 0.4)",
       },
     },
   },

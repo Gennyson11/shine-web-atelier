@@ -1,29 +1,28 @@
 import React from "react";
 
 interface HeartIconProps {
-  className?: string;
   size?: number;
+  className?: string;
 }
 
-const HeartIcon: React.FC<HeartIconProps> = ({ className = "", size = 48 }) => {
+const HeartIcon: React.FC<HeartIconProps> = ({ size = 24, className = "" }) => {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 48 48"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
       <defs>
-        <linearGradient id="heartGradient" x1="24" y1="4" x2="24" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="hsl(15 90% 60%)" />
-          <stop offset="50%" stopColor="hsl(330 81% 60%)" />
-          <stop offset="100%" stopColor="hsl(271 81% 56%)" />
+        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="hsl(280 100% 70%)" />
+          <stop offset="100%" stopColor="hsl(320 100% 65%)" />
         </linearGradient>
       </defs>
       <path
-        d="M24 44C24 44 4 30.5 4 17.5C4 11.5 9 6 15.5 6C19.5 6 23 8.5 24 11C25 8.5 28.5 6 32.5 6C39 6 44 11.5 44 17.5C44 30.5 24 44 24 44Z"
+        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
         fill="url(#heartGradient)"
       />
     </svg>

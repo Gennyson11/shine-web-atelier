@@ -15,13 +15,22 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background stars-bg">
       <Header />
       <main>
         <HeroSection />
         <SpecialOffersSection onBuy={handleBuyCredits} />
         <PackagesSection onBuy={handleBuyCredits} />
       </main>
+
+      {/* Footer */}
+      <footer className="py-8 border-t border-border/30">
+        <div className="container text-center">
+          <p className="text-sm text-muted-foreground">
+            © 2024 lovablecreditos. Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
 
       {selectedPackage && (
         <PixPaymentModal
