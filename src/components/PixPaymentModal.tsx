@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Copy, QrCode, HelpCircle, MessageCircle, ChevronDown, ChevronUp, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import qrCodePix24 from "@/assets/qrcode-pix-24.jpeg";
+import qrCodePix54 from "@/assets/qrcode-pix-54.jpeg";
 
 interface PixPaymentModalProps {
   open: boolean;
@@ -11,6 +12,18 @@ interface PixPaymentModalProps {
   credits: number;
   price: number;
 }
+
+// Configuração de QR codes e chaves PIX por preço
+const pixConfig: Record<number, { qrCode: string; pixKey: string }> = {
+  24: {
+    qrCode: qrCodePix24,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540524.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63045D08",
+  },
+  54: {
+    qrCode: qrCodePix54,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540554.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63043EF0",
+  },
+};
 
 const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
   open,
@@ -21,7 +34,9 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
   const [helpOpen, setHelpOpen] = useState(false);
   const { toast } = useToast();
   
-  const pixKey = "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540524.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63045D08";
+  // Busca configuração pelo preço ou usa o de R$24 como fallback
+  const config = pixConfig[price] || pixConfig[24];
+  const { qrCode, pixKey } = config;
 
   const handleCopyPixKey = () => {
     navigator.clipboard.writeText(pixKey);
@@ -79,7 +94,7 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
           <div className="px-6 pb-4">
             <div className="bg-white rounded-lg p-4 mx-auto w-fit">
               <img 
-                src={qrCodePix24} 
+                src={qrCode} 
                 alt="QR Code PIX" 
                 className="w-40 h-40 object-contain"
               />
