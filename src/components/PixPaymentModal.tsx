@@ -33,7 +33,7 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(`Olá! Acabei de fazer um pagamento PIX de R$ ${price.toFixed(2).replace('.', ',')} para ${credits} créditos.`);
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+    window.open(`https://wa.me/5584998889568?text=${message}`, "_blank");
   };
 
   if (!open) return null;
