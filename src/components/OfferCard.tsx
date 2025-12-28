@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import HeartIcon from "./HeartIcon";
+import { Zap } from "lucide-react";
 
 interface OfferCardProps {
   credits: number;
@@ -27,24 +28,28 @@ const OfferCard: React.FC<OfferCardProps> = ({
 }) => {
   return (
     <div 
-      className="relative gradient-card rounded-2xl border border-primary/10 p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+      className="relative group rounded-2xl border border-primary/20 bg-card/80 backdrop-blur-sm p-6 shadow-card hover:shadow-card-hover hover:border-primary/40 transition-all duration-500 hover:-translate-y-2 animate-fade-in"
       style={{ animationDelay: `${index * 100}ms` }}
     >
+      {/* Glow effect on hover */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
       {/* Offer Badge */}
       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-        <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+        <span className="inline-flex items-center gap-1 gradient-button text-primary-foreground text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide shadow-button">
+          <Zap className="w-3 h-3" />
           Oferta
         </span>
       </div>
 
-      <div className="flex flex-col items-center pt-4">
+      <div className="relative flex flex-col items-center pt-4">
         {/* Heart Icon */}
         <div className="mb-4 animate-float">
           <HeartIcon size={40} />
         </div>
 
         {/* Credits */}
-        <div className="text-4xl font-extrabold text-foreground mb-1">
+        <div className="text-4xl font-bold text-foreground mb-1">
           {credits}
         </div>
         <div className="text-sm text-muted-foreground mb-1">créditos</div>
@@ -70,8 +75,12 @@ const OfferCard: React.FC<OfferCardProps> = ({
         </div>
 
         {/* CTA Button */}
-        <Button variant="offer" className="w-full" size="lg" onClick={onBuy}>
-          Garantir!
+        <Button 
+          className="w-full gradient-button text-primary-foreground font-semibold shadow-button hover:shadow-button-hover hover:scale-105 transition-all duration-300" 
+          size="lg" 
+          onClick={onBuy}
+        >
+          Garantir Agora
         </Button>
       </div>
     </div>

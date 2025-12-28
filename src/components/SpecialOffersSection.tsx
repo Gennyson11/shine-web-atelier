@@ -47,13 +47,16 @@ interface SpecialOffersSectionProps {
 
 const SpecialOffersSection: React.FC<SpecialOffersSectionProps> = ({ onBuy }) => {
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-16 md:py-24 relative">
       <div className="container px-4">
-        <div className="flex flex-col items-center mb-10">
+        <div className="flex flex-col items-center mb-12">
           <OfferBadge>Ofertas por Tempo Limitado</OfferBadge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
-            Ofertas Especiais
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 text-center">
+            Ofertas <span className="text-gradient-primary">Especiais</span>
           </h2>
+          <p className="text-muted-foreground mt-3 text-center max-w-lg">
+            Aproveite nossos pacotes com desconto exclusivo por tempo limitado
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

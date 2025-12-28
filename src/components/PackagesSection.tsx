@@ -16,18 +16,18 @@ interface PackagesSectionProps {
 
 const PackagesSection: React.FC<PackagesSectionProps> = ({ onBuy }) => {
   return (
-    <section className="py-12 md:py-16 bg-background">
+    <section className="py-16 md:py-24 relative">
       <div className="container px-4">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Escolha seu pacote
+            Escolha seu <span className="text-gradient-primary">pacote</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Todos os pacotes incluem créditos oficiais Lovable com entrega automática.
+            Todos os pacotes incluem créditos oficiais Lovable com entrega automática via WhatsApp.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
           {packages.map((pkg, index) => (
             <PackageCard 
               key={pkg.credits} 
