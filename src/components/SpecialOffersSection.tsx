@@ -41,7 +41,11 @@ const specialOffers = [
   },
 ];
 
-const SpecialOffersSection: React.FC = () => {
+interface SpecialOffersSectionProps {
+  onBuy: (credits: number, price: number) => void;
+}
+
+const SpecialOffersSection: React.FC<SpecialOffersSectionProps> = ({ onBuy }) => {
   return (
     <section className="py-12 md:py-16">
       <div className="container px-4">
@@ -54,7 +58,12 @@ const SpecialOffersSection: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {specialOffers.map((offer, index) => (
-            <OfferCard key={offer.credits} {...offer} index={index} />
+            <OfferCard 
+              key={offer.credits} 
+              {...offer} 
+              index={index} 
+              onBuy={() => onBuy(offer.credits, offer.discountedPrice)}
+            />
           ))}
         </div>
       </div>

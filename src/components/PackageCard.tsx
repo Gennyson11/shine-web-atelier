@@ -7,6 +7,7 @@ interface PackageCardProps {
   price: number;
   pricePerCredit: number;
   index: number;
+  onBuy: () => void;
 }
 
 const PackageCard: React.FC<PackageCardProps> = ({
@@ -14,6 +15,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
   price,
   pricePerCredit,
   index,
+  onBuy,
 }) => {
   return (
     <div 
@@ -41,7 +43,11 @@ const PackageCard: React.FC<PackageCardProps> = ({
         </div>
 
         {/* CTA Button */}
-        <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+        <Button 
+          variant="outline" 
+          className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+          onClick={onBuy}
+        >
           Selecionar
         </Button>
       </div>
