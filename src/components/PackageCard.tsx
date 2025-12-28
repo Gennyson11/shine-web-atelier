@@ -17,7 +17,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
 }) => {
   return (
     <div 
-      className="bg-card rounded-xl border border-border p-6 shadow-sm hover:shadow-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+      className="bg-card rounded-xl border border-border p-6 shadow-sm hover:shadow-card hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
       style={{ animationDelay: `${index * 80}ms` }}
     >
       <div className="flex flex-col items-center">
