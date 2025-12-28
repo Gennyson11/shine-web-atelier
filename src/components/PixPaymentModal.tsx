@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Copy, QrCode, HelpCircle, MessageCircle, ChevronDown, ChevronUp, X } from "lucide-react";
@@ -42,12 +44,13 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-background border-border p-0 gap-0 overflow-hidden">
+      <DialogContent className="sm:max-w-md border-border p-0 gap-0 overflow-hidden [&>button]:hidden" aria-describedby="pix-modal-description">
         {/* Header com ícone */}
-        <div className="relative pt-8 pb-4 flex flex-col items-center">
+        <div className="relative pt-8 pb-4 flex flex-col items-center px-6">
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 p-1 rounded-md hover:bg-muted transition-colors z-10"
+            className="absolute top-3 right-3 p-1.5 rounded-md hover:bg-muted transition-colors z-10"
+            type="button"
           >
             <X className="h-5 w-5 text-muted-foreground" />
           </button>
@@ -56,14 +59,14 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
             <QrCode className="h-7 w-7 text-primary" />
           </div>
           
-          <div className="text-center space-y-1">
-            <h2 className="text-xl font-semibold">
-              Pagamento via <span className="text-primary">PIX</span>
-            </h2>
-            <p className="text-sm text-muted-foreground">{credits} créditos</p>
-          </div>
+          <DialogTitle className="text-xl font-semibold text-center">
+            Pagamento via <span className="text-primary">PIX</span>
+          </DialogTitle>
+          <DialogDescription id="pix-modal-description" className="text-sm text-muted-foreground text-center">
+            {credits} créditos
+          </DialogDescription>
           
-          <p className="text-lg font-bold mt-2">
+          <p className="text-lg font-bold mt-2 text-foreground">
             Pague R$ {price.toFixed(2).replace('.', ',')}
           </p>
         </div>
@@ -102,6 +105,7 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
             onClick={handleCopyPixKey} 
             variant="hero" 
             className="w-full"
+            type="button"
           >
             <Copy className="h-4 w-4 mr-2" />
             Copiar Chave PIX
@@ -113,6 +117,7 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
           <button
             onClick={() => setHelpOpen(!helpOpen)}
             className="flex items-center justify-between w-full text-left py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            type="button"
           >
             <div className="flex items-center gap-2">
               <HelpCircle className="h-4 w-4" />
@@ -141,7 +146,8 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
           <Button 
             onClick={handleWhatsApp}
             variant="outline" 
-            className="w-full border-primary/30 text-primary hover:bg-primary/10"
+            className="w-full border-green-500/50 text-green-500 hover:bg-green-500/10 hover:text-green-400"
+            type="button"
           >
             <MessageCircle className="h-4 w-4 mr-2" />
             Após efetuar a compra, nos chame no WhatsApp
