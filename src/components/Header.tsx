@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
+import { Link } from "react-router-dom";
 import HeartIcon from "./HeartIcon";
 
 const Header: React.FC = () => {
@@ -13,10 +14,12 @@ const Header: React.FC = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <Button variant="nav" size="default">
-            <LogIn className="mr-2 h-4 w-4" />
-            Entrar
-          </Button>
+          <Link to="/auth">
+            <Button variant="nav" size="default">
+              <LogIn className="mr-2 h-4 w-4" />
+              Entrar
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
