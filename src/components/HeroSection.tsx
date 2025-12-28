@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
   return (
@@ -13,10 +14,12 @@ const HeroSection: React.FC = () => {
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Adquira créditos para usar na plataforma Lovable com os melhores preços
         </p>
-        <Button variant="hero" size="lg" className="animate-fade-in">
-          <LogIn className="mr-2 h-5 w-5" />
-          Entrar para comprar
-        </Button>
+        <Link to="/auth">
+          <Button variant="hero" size="lg" className="animate-fade-in">
+            <LogIn className="mr-2 h-5 w-5" />
+            Entrar para comprar
+          </Button>
+        </Link>
       </div>
     </section>
   );
