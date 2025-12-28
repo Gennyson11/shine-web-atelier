@@ -2,12 +2,12 @@ import React from "react";
 import PackageCard from "./PackageCard";
 
 const packages = [
-  { credits: 50, price: 4, pricePerCredit: 0.08 },
-  { credits: 100, price: 8, pricePerCredit: 0.08 },
-  { credits: 250, price: 20, pricePerCredit: 0.08 },
-  { credits: 500, price: 40, pricePerCredit: 0.08 },
-  { credits: 1000, price: 80, pricePerCredit: 0.08 },
-  { credits: 2000, price: 120, pricePerCredit: 0.06 },
+  { credits: 50, price: 8, pricePerCredit: 0.16 },
+  { credits: 100, price: 16, pricePerCredit: 0.16 },
+  { credits: 250, price: 40, pricePerCredit: 0.16 },
+  { credits: 500, price: 80, pricePerCredit: 0.16 },
+  { credits: 1000, price: 160, pricePerCredit: 0.16 },
+  { credits: 2000, price: 240, pricePerCredit: 0.12 },
 ];
 
 const PackagesSection: React.FC = () => {
