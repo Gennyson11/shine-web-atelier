@@ -4,11 +4,11 @@ import { LogIn } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 text-center">
+    <section className="py-16 md:py-24 text-center gradient-hero">
       <div className="container max-w-3xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
           Compre créditos{" "}
-          <span className="text-primary">Lovable</span>
+          <span className="text-gradient-primary">Lovable</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Adquira créditos para usar na plataforma Lovable com os melhores preços

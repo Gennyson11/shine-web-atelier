@@ -17,9 +17,9 @@ const HeartIcon: React.FC<HeartIconProps> = ({ className = "", size = 48 }) => {
     >
       <defs>
         <linearGradient id="heartGradient" x1="24" y1="4" x2="24" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="hsl(45 93% 58%)" />
-          <stop offset="50%" stopColor="hsl(24 95% 53%)" />
-          <stop offset="100%" stopColor="hsl(340 80% 55%)" />
+          <stop offset="0%" stopColor="hsl(15 90% 60%)" />
+          <stop offset="50%" stopColor="hsl(330 81% 60%)" />
+          <stop offset="100%" stopColor="hsl(271 81% 56%)" />
         </linearGradient>
       </defs>
       <path

@@ -60,15 +60,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        orange: {
-          DEFAULT: "hsl(var(--orange-glow))",
-          glow: "hsl(var(--orange-glow))",
+        purple: {
+          DEFAULT: "hsl(var(--purple))",
+          light: "hsl(var(--purple-light))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        pink: {
+          DEFAULT: "hsl(var(--pink))",
+          light: "hsl(var(--pink-light))",
         },
-        navy: "hsl(var(--navy))",
+        coral: "hsl(var(--coral))",
         success: {
           DEFAULT: "hsl(var(--success))",
           light: "hsl(var(--success-light))",
