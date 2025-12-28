@@ -6,13 +6,13 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
+    --background: 225 15% 10%;
     --foreground: 0 0% 95%;
 
-    --card: 240 10% 8%;
+    --card: 225 15% 13%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 240 10% 8%;
+    --popover: 225 15% 13%;
     --popover-foreground: 0 0% 95%;
 
     --primary: 271 81% 56%;
@@ -21,8 +21,8 @@
     --secondary: 330 81% 60%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 225 15% 18%;
+    --muted-foreground: 225 10% 60%;
 
     --accent: 271 81% 56%;
     --accent-foreground: 0 0% 100%;
@@ -30,8 +30,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5% 18%;
-    --input: 240 5% 18%;
+    --border: 225 15% 20%;
+    --input: 225 15% 20%;
     --ring: 271 81% 60%;
 
     --radius: 0.75rem;
@@ -47,20 +47,20 @@
     --success-light: 142 76% 90%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 90% 15%) 0%, hsl(271 81% 20%) 35%, hsl(330 81% 18%) 70%, hsl(15 90% 15%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(271 81% 12%) 0%, hsl(330 81% 12%) 100%);
-    --gradient-card-hover: linear-gradient(135deg, hsl(271 81% 18%) 0%, hsl(330 81% 18%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(225 20% 12%) 0%, hsl(271 30% 15%) 35%, hsl(330 30% 14%) 70%, hsl(225 15% 10%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(271 30% 15%) 0%, hsl(330 30% 15%) 100%);
+    --gradient-card-hover: linear-gradient(135deg, hsl(271 35% 20%) 0%, hsl(330 35% 20%) 100%);
     --gradient-button: linear-gradient(135deg, hsl(271 81% 56%) 0%, hsl(330 81% 60%) 100%);
     --gradient-heart: linear-gradient(180deg, hsl(15 90% 60%) 0%, hsl(330 81% 60%) 50%, hsl(271 81% 56%) 100%);
     --gradient-text: linear-gradient(135deg, hsl(271 81% 56%) 0%, hsl(330 81% 60%) 100%);
 
-    --sidebar-background: 240 10% 6%;
+    --sidebar-background: 225 15% 8%;
     --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 271 81% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 5% 12%;
+    --sidebar-accent: 225 15% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 240 5% 15%;
+    --sidebar-border: 225 15% 18%;
     --sidebar-ring: 271 81% 56%;
   }
 
