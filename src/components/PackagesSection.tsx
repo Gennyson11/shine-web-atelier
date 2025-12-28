@@ -10,7 +10,11 @@ const packages = [
   { credits: 2000, price: 240, pricePerCredit: 0.12 },
 ];
 
-const PackagesSection: React.FC = () => {
+interface PackagesSectionProps {
+  onBuy: (credits: number, price: number) => void;
+}
+
+const PackagesSection: React.FC<PackagesSectionProps> = ({ onBuy }) => {
   return (
     <section className="py-12 md:py-16 bg-background">
       <div className="container px-4">
@@ -25,7 +29,12 @@ const PackagesSection: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
-            <PackageCard key={pkg.credits} {...pkg} index={index} />
+            <PackageCard 
+              key={pkg.credits} 
+              {...pkg} 
+              index={index} 
+              onBuy={() => onBuy(pkg.credits, pkg.price)}
+            />
           ))}
         </div>
       </div>

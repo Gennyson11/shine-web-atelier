@@ -11,6 +11,7 @@ interface OfferCardProps {
   discountPercentage: number;
   pricePerCredit: number;
   index: number;
+  onBuy: () => void;
 }
 
 const OfferCard: React.FC<OfferCardProps> = ({
@@ -22,6 +23,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
   discountPercentage,
   pricePerCredit,
   index,
+  onBuy,
 }) => {
   return (
     <div 
@@ -68,7 +70,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
         </div>
 
         {/* CTA Button */}
-        <Button variant="offer" className="w-full" size="lg">
+        <Button variant="offer" className="w-full" size="lg" onClick={onBuy}>
           Garantir!
         </Button>
       </div>
