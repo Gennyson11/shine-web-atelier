@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Copy, QrCode, HelpCircle, MessageCircle, ChevronDown, ChevronUp, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import qrCodePix24 from "@/assets/qrcode-pix-24.jpeg";
 
 interface PixPaymentModalProps {
   open: boolean;
@@ -25,8 +26,8 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
   const [helpOpen, setHelpOpen] = useState(false);
   const { toast } = useToast();
   
-  // Chave PIX de exemplo - substitua pela real
-  const pixKey = "616c37e1-5b48-4213-bf9a-9ec880a525af";
+  // Chave PIX real
+  const pixKey = "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540524.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63045D08";
 
   const handleCopyPixKey = () => {
     navigator.clipboard.writeText(pixKey);
@@ -72,59 +73,11 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
         {/* QR Code */}
         <div className="px-6 pb-4">
           <div className="bg-white rounded-lg p-4 mx-auto w-fit">
-            {/* QR Code placeholder - substitua por uma lib de QR code real */}
-            <div className="w-40 h-40 bg-white flex items-center justify-center">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                {/* QR Code pattern simplificado */}
-                <rect fill="#000" x="0" y="0" width="8" height="8"/>
-                <rect fill="#000" x="10" y="0" width="4" height="4"/>
-                <rect fill="#000" x="18" y="0" width="4" height="4"/>
-                <rect fill="#000" x="26" y="0" width="8" height="8"/>
-                <rect fill="#000" x="0" y="10" width="4" height="4"/>
-                <rect fill="#000" x="12" y="10" width="4" height="4"/>
-                <rect fill="#000" x="22" y="10" width="4" height="4"/>
-                <rect fill="#000" x="30" y="10" width="4" height="4"/>
-                <rect fill="#000" x="0" y="18" width="4" height="4"/>
-                <rect fill="#000" x="8" y="18" width="8" height="4"/>
-                <rect fill="#000" x="20" y="18" width="6" height="4"/>
-                <rect fill="#000" x="30" y="18" width="4" height="4"/>
-                <rect fill="#000" x="0" y="26" width="8" height="8"/>
-                <rect fill="#000" x="12" y="26" width="4" height="4"/>
-                <rect fill="#000" x="20" y="26" width="4" height="4"/>
-                <rect fill="#000" x="26" y="26" width="8" height="8"/>
-                {/* Mais padrões para parecer um QR code */}
-                <rect fill="#000" x="40" y="0" width="4" height="4"/>
-                <rect fill="#000" x="48" y="0" width="4" height="4"/>
-                <rect fill="#000" x="56" y="0" width="4" height="4"/>
-                <rect fill="#000" x="66" y="0" width="8" height="8"/>
-                <rect fill="#000" x="78" y="0" width="8" height="8"/>
-                <rect fill="#000" x="92" y="0" width="8" height="8"/>
-                <rect fill="#000" x="40" y="8" width="4" height="4"/>
-                <rect fill="#000" x="52" y="8" width="4" height="4"/>
-                <rect fill="#000" x="60" y="8" width="4" height="4"/>
-                <rect fill="#000" x="70" y="8" width="4" height="4"/>
-                <rect fill="#000" x="82" y="8" width="4" height="4"/>
-                <rect fill="#000" x="92" y="8" width="4" height="4"/>
-                <rect fill="#000" x="40" y="16" width="8" height="4"/>
-                <rect fill="#000" x="54" y="16" width="6" height="4"/>
-                <rect fill="#000" x="66" y="16" width="4" height="4"/>
-                <rect fill="#000" x="76" y="16" width="8" height="4"/>
-                <rect fill="#000" x="92" y="16" width="4" height="4"/>
-                {/* Centro */}
-                <rect fill="#000" x="40" y="40" width="20" height="20"/>
-                <rect fill="#fff" x="44" y="44" width="12" height="12"/>
-                <rect fill="#000" x="48" y="48" width="4" height="4"/>
-                {/* Bottom */}
-                <rect fill="#000" x="0" y="66" width="8" height="8"/>
-                <rect fill="#000" x="0" y="78" width="8" height="8"/>
-                <rect fill="#000" x="0" y="92" width="8" height="8"/>
-                <rect fill="#000" x="66" y="92" width="8" height="8"/>
-                <rect fill="#000" x="78" y="92" width="8" height="8"/>
-                <rect fill="#000" x="92" y="92" width="8" height="8"/>
-                <rect fill="#000" x="92" y="78" width="8" height="8"/>
-                <rect fill="#000" x="92" y="66" width="8" height="8"/>
-              </svg>
-            </div>
+            <img 
+              src={qrCodePix24} 
+              alt="QR Code PIX" 
+              className="w-40 h-40 object-contain"
+            />
           </div>
           
           <p className="text-center text-sm text-muted-foreground mt-3">
