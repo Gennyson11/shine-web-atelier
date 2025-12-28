@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Copy, QrCode, HelpCircle, MessageCircle, ChevronDown, ChevronUp, X } from "lucide-react";
@@ -49,7 +47,7 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
         <div className="relative pt-8 pb-4 flex flex-col items-center">
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 p-1 rounded-md hover:bg-muted transition-colors"
+            className="absolute top-3 right-3 p-1 rounded-md hover:bg-muted transition-colors z-10"
           >
             <X className="h-5 w-5 text-muted-foreground" />
           </button>
@@ -58,12 +56,12 @@ const PixPaymentModal: React.FC<PixPaymentModalProps> = ({
             <QrCode className="h-7 w-7 text-primary" />
           </div>
           
-          <DialogHeader className="text-center space-y-1">
-            <DialogTitle className="text-xl font-semibold">
+          <div className="text-center space-y-1">
+            <h2 className="text-xl font-semibold">
               Pagamento via <span className="text-primary">PIX</span>
-            </DialogTitle>
+            </h2>
             <p className="text-sm text-muted-foreground">{credits} créditos</p>
-          </DialogHeader>
+          </div>
           
           <p className="text-lg font-bold mt-2">
             Pague R$ {price.toFixed(2).replace('.', ',')}
