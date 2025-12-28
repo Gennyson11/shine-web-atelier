@@ -9,6 +9,7 @@ import HeartIcon from "@/components/HeartIcon";
 import OfferCard from "@/components/OfferCard";
 import PackageCard from "@/components/PackageCard";
 import OfferBadge from "@/components/OfferBadge";
+import PixPaymentModal from "@/components/PixPaymentModal";
 
 interface Profile {
   id: string;
@@ -70,6 +71,8 @@ const Dashboard: React.FC = () => {
   const { user, signOut, loading: authLoading } = useAuth();
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
+  const [pixModalOpen, setPixModalOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<{ credits: number; price: number } | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -117,10 +120,8 @@ const Dashboard: React.FC = () => {
   };
 
   const handleBuyCredits = (credits: number, price: number) => {
-    toast({
-      title: "Compra de créditos",
-      description: `Em breve você poderá comprar ${credits} créditos por R$ ${price}`,
-    });
+    setSelectedPackage({ credits, price });
+    setPixModalOpen(true);
   };
 
   if (authLoading || loading) {
@@ -218,6 +219,16 @@ const Dashboard: React.FC = () => {
           </div>
         </section>
       </main>
+
+      {/* PIX Payment Modal */}
+      {selectedPackage && (
+        <PixPaymentModal
+          open={pixModalOpen}
+          onClose={() => setPixModalOpen(false)}
+          credits={selectedPackage.credits}
+          price={selectedPackage.price}
+        />
+      )}
     </div>
   );
 };
