@@ -8,6 +8,7 @@ import qrCodePix16 from "@/assets/qrcode-pix-16.jpeg";
 import qrCodePix24 from "@/assets/qrcode-pix-24.jpeg";
 import qrCodePix40 from "@/assets/qrcode-pix-40.jpeg";
 import qrCodePix54 from "@/assets/qrcode-pix-54.jpeg";
+import qrCodePix80 from "@/assets/qrcode-pix-80.jpeg";
 import qrCodePix110 from "@/assets/qrcode-pix-110.jpeg";
 import qrCodePix180 from "@/assets/qrcode-pix-180.jpeg";
 
@@ -39,6 +40,10 @@ const pixConfig: Record<number, { qrCode: string; pixKey: string }> = {
   54: {
     qrCode: qrCodePix54,
     pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540554.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63043EF0",
+  },
+  80: {
+    qrCode: qrCodePix80,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540580.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***6304E185",
   },
   110: {
     qrCode: qrCodePix110,
