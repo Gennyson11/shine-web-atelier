@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SpecialOffersSection from "@/components/SpecialOffersSection";
 import PackagesSection from "@/components/PackagesSection";
+import FAQSection from "@/components/FAQSection";
 import PixPaymentModal from "@/components/PixPaymentModal";
 
 const Index: React.FC = () => {
@@ -21,6 +22,7 @@ const Index: React.FC = () => {
         <HeroSection />
         <SpecialOffersSection onBuy={handleBuyCredits} />
         <PackagesSection onBuy={handleBuyCredits} />
+        <FAQSection />
       </main>
 
       {/* Footer */}
