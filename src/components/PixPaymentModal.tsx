@@ -3,6 +3,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button";
 import { Copy, QrCode, HelpCircle, MessageCircle, ChevronDown, ChevronUp, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import qrCodePix8 from "@/assets/qrcode-pix-8.jpeg";
 import qrCodePix24 from "@/assets/qrcode-pix-24.jpeg";
 import qrCodePix54 from "@/assets/qrcode-pix-54.jpeg";
 import qrCodePix110 from "@/assets/qrcode-pix-110.jpeg";
@@ -17,6 +18,10 @@ interface PixPaymentModalProps {
 
 // Configuração de QR codes e chaves PIX por preço
 const pixConfig: Record<number, { qrCode: string; pixKey: string }> = {
+  8: {
+    qrCode: qrCodePix8,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b52040000530398654048.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63046B38",
+  },
   24: {
     qrCode: qrCodePix24,
     pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540524.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63045D08",
