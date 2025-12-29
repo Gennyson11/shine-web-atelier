@@ -1,17 +1,13 @@
 import React from "react";
 import HeartIcon from "./HeartIcon";
-
 const Header: React.FC = () => {
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
+  return <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-center">
         <div className="flex items-center gap-2">
           <HeartIcon size={32} />
-          <span className="text-xl font-bold text-foreground">Lovable Créditos</span>
+          <span className="text-xl font-bold text-foreground">Créditos Lovable   </span>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
