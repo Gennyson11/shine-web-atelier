@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "Quais formas de pagamento são aceitas?",
-    answer: "Aceitamos PIX (entrega instantânea), cartão de crédito (até 12x sem juros)"
+    answer: "Aceitamos PIX (entrega instantânea), cartão de crédito (até 6x sem juros)"
   },
   {
     question: "Os créditos têm validade?",
