@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import qrCodePix8 from "@/assets/qrcode-pix-8.jpeg";
 import qrCodePix16 from "@/assets/qrcode-pix-16.jpeg";
 import qrCodePix24 from "@/assets/qrcode-pix-24.jpeg";
+import qrCodePix40 from "@/assets/qrcode-pix-40.jpeg";
 import qrCodePix54 from "@/assets/qrcode-pix-54.jpeg";
 import qrCodePix110 from "@/assets/qrcode-pix-110.jpeg";
 import qrCodePix180 from "@/assets/qrcode-pix-180.jpeg";
@@ -30,6 +31,10 @@ const pixConfig: Record<number, { qrCode: string; pixKey: string }> = {
   24: {
     qrCode: qrCodePix24,
     pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540524.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63045D08",
+  },
+  40: {
+    qrCode: qrCodePix40,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540540.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63040AE5",
   },
   54: {
     qrCode: qrCodePix54,
