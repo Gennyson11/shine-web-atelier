@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Copy, QrCode, HelpCircle, MessageCircle, ChevronDown, ChevronUp, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import qrCodePix8 from "@/assets/qrcode-pix-8.jpeg";
+import qrCodePix16 from "@/assets/qrcode-pix-16.jpeg";
 import qrCodePix24 from "@/assets/qrcode-pix-24.jpeg";
 import qrCodePix54 from "@/assets/qrcode-pix-54.jpeg";
 import qrCodePix110 from "@/assets/qrcode-pix-110.jpeg";
@@ -21,6 +22,10 @@ const pixConfig: Record<number, { qrCode: string; pixKey: string }> = {
   8: {
     qrCode: qrCodePix8,
     pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b52040000530398654048.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63046B38",
+  },
+  16: {
+    qrCode: qrCodePix16,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b520400005303986540516.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***6304FEEE",
   },
   24: {
     qrCode: qrCodePix24,
