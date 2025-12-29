@@ -80,7 +80,7 @@ const SpecialOffersSection: React.FC<SpecialOffersSectionProps> = ({ onBuy }) =>
             className="inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm md:text-base hover:bg-emerald-500/20 transition-colors cursor-pointer"
           >
             <MessageCircle className="w-5 h-5 flex-shrink-0" />
-            <span>Aceitamos PIX (entrega instantânea), cartão de crédito (até 6x sem juros)</span>
+            <span>Após efetuar a compra, nos chame no WhatsApp com o comprovante e o valor de créditos</span>
           </a>
         </div>
       </div>
