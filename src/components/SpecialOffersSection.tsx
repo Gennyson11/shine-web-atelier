@@ -1,4 +1,5 @@
 import React from "react";
+import { MessageCircle } from "lucide-react";
 import OfferBadge from "./OfferBadge";
 import OfferCard from "./OfferCard";
 
@@ -68,6 +69,19 @@ const SpecialOffersSection: React.FC<SpecialOffersSectionProps> = ({ onBuy }) =>
               onBuy={() => onBuy(offer.credits, offer.discountedPrice)}
             />
           ))}
+        </div>
+
+        {/* WhatsApp CTA */}
+        <div className="flex justify-center mt-10">
+          <a 
+            href="https://wa.me/558499889568?text=Olá! Acabei de efetuar uma compra de créditos Lovable."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm md:text-base hover:bg-emerald-500/20 transition-colors cursor-pointer"
+          >
+            <MessageCircle className="w-5 h-5 flex-shrink-0" />
+            <span>Após efetuar a compra, nos chame no WhatsApp com o comprovante e o valor de créditos</span>
+          </a>
         </div>
       </div>
     </section>
