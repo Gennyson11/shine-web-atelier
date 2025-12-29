@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Posso pedir reembolso?",
-    answer: "Sim, oferecemos reembolso em casos específicos. Entre em contato conosco em até 7 dias após a compra caso tenha algum problema. Analisaremos seu caso individualmente."
+    answer: "Após o envio dos créditos, não há reembolso pois eles permanecem na sua conta. Caso ocorra algum problema na entrega, faremos o reembolso integral."
   },
   {
     question: "É seguro comprar neste site?",
