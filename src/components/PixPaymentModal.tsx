@@ -12,6 +12,7 @@ import qrCodePix80 from "@/assets/qrcode-pix-80.jpeg";
 import qrCodePix110 from "@/assets/qrcode-pix-110.jpeg";
 import qrCodePix160 from "@/assets/qrcode-pix-160.jpeg";
 import qrCodePix180 from "@/assets/qrcode-pix-180.jpeg";
+import qrCodePix240 from "@/assets/qrcode-pix-240.jpeg";
 
 interface PixPaymentModalProps {
   open: boolean;
@@ -57,6 +58,10 @@ const pixConfig: Record<number, { qrCode: string; pixKey: string }> = {
   180: {
     qrCode: qrCodePix180,
     pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b5204000053039865406180.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***6304B9B5",
+  },
+  240: {
+    qrCode: qrCodePix240,
+    pixKey: "00020101021126580014br.gov.bcb.pix0136247db185-9cfe-4b26-9a77-d1f33839828b5204000053039865406240.005802BR5923GENNYSON M DE M OLIVEIR6010CERRO CORA62070503***63041DCC",
   },
 };
 
