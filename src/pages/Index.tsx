@@ -6,6 +6,7 @@ import PackagesSection from "@/components/PackagesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FAQSection from "@/components/FAQSection";
 import PixPaymentModal from "@/components/PixPaymentModal";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index: React.FC = () => {
   const [pixModalOpen, setPixModalOpen] = useState(false);
@@ -44,6 +45,8 @@ const Index: React.FC = () => {
           price={selectedPackage.price}
         />
       )}
+
+      <FloatingWhatsApp />
     </div>
   );
 };
