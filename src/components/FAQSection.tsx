@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "Quais formas de pagamento são aceitas?",
-    answer: "Atualmente aceitamos pagamento via PIX, que é instantâneo e seguro. É a forma mais rápida e prática para você receber seus créditos imediatamente."
+    answer: "Aceitamos PIX (entrega instantânea), cartão de crédito (até 12x sem juros)"
   },
   {
     question: "Os créditos têm validade?",
