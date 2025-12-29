@@ -1,4 +1,5 @@
 import React from "react";
+import { MessageCircle } from "lucide-react";
 import PackageCard from "./PackageCard";
 
 const packages = [
@@ -36,6 +37,14 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ onBuy }) => {
               onBuy={() => onBuy(pkg.credits, pkg.price)}
             />
           ))}
+        </div>
+
+        {/* WhatsApp CTA */}
+        <div className="flex justify-center mt-10">
+          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm md:text-base">
+            <MessageCircle className="w-5 h-5 flex-shrink-0" />
+            <span>Após efetuar a compra, nos chame no WhatsApp com o comprovante e o valor de créditos</span>
+          </div>
         </div>
       </div>
     </section>
