@@ -78,7 +78,10 @@ const OfferCard: React.FC<OfferCardProps> = ({
         <Button 
           className="w-full gradient-button text-primary-foreground font-semibold shadow-button hover:shadow-button-hover hover:scale-105 transition-all duration-300" 
           size="lg" 
-          onClick={onBuy}
+          onClick={() => {
+            const message = encodeURIComponent(`Olá! Tenho interesse no pacote de ${credits} créditos por R$ ${discountedPrice}.`);
+            window.open(`https://wa.me/558499889568?text=${message}`, "_blank");
+          }}
         >
           Garantir Agora
         </Button>
