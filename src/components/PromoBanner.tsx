@@ -3,11 +3,11 @@ import { Sparkles, Clock } from "lucide-react";
 
 const PromoBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-primary/90 via-primary to-primary/90 text-primary-foreground py-3 px-4 relative overflow-hidden">
+    <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-white py-3 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1 -left-1 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse" />
-        <div className="absolute -bottom-1 -right-1 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute -top-1 -left-1 w-20 h-20 bg-yellow-300/20 rounded-full blur-xl animate-pulse" />
+        <div className="absolute -bottom-1 -right-1 w-32 h-32 bg-yellow-300/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
       
       <div className="container flex items-center justify-center gap-3 relative z-10">
