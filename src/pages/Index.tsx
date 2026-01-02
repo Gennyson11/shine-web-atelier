@@ -7,6 +7,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import FAQSection from "@/components/FAQSection";
 import PixPaymentModal from "@/components/PixPaymentModal";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import PromoBanner from "@/components/PromoBanner";
 
 const Index: React.FC = () => {
   const [pixModalOpen, setPixModalOpen] = useState(false);
@@ -19,6 +20,7 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background stars-bg">
+      <PromoBanner />
       <Header />
       <main>
         <HeroSection />
