@@ -46,7 +46,10 @@ const PackageCard: React.FC<PackageCardProps> = ({
         <Button 
           variant="outline" 
           className="w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
-          onClick={onBuy}
+          onClick={() => {
+            const message = encodeURIComponent(`Olá! Tenho interesse no pacote de ${credits} créditos por R$ ${price}.`);
+            window.open(`https://wa.me/558499889568?text=${message}`, "_blank");
+          }}
         >
           Selecionar
         </Button>
