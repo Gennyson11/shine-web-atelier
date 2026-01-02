@@ -15,10 +15,6 @@ const PromoBanner: React.FC = () => {
         <p className="text-sm md:text-base font-semibold text-center">
           🎉 PROMOÇÃO ESPECIAL: <span className="text-yellow-300">50% DE DESCONTO</span> em todos os pacotes!
         </p>
-        <div className="hidden sm:flex items-center gap-1.5 bg-white/20 px-3 py-1 rounded-full">
-          <Clock className="w-4 h-4" />
-          <span className="text-xs font-medium">Até 06/01/2026</span>
-        </div>
         <Sparkles className="w-5 h-5 animate-pulse hidden md:block" />
       </div>
     </div>
