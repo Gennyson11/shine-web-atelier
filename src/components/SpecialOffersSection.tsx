@@ -45,9 +45,9 @@ const specialOffers = [
     baseCredits: 10000,
     bonusCredits: 0,
     originalPrice: 800,
-    discountedPrice: 300,
-    discountPercentage: 62,
-    pricePerCredit: 0.03,
+    discountedPrice: 285,
+    discountPercentage: 64,
+    pricePerCredit: 0.0285,
     featured: true,
   },
 ];
