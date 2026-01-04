@@ -9,6 +9,7 @@ const packages = [
   { credits: 500, price: 40, pricePerCredit: 0.08 },
   { credits: 1000, price: 80, pricePerCredit: 0.08 },
   { credits: 2000, price: 120, pricePerCredit: 0.06 },
+  { credits: 10000, price: 300, pricePerCredit: 0.03 },
 ];
 
 interface PackagesSectionProps {
