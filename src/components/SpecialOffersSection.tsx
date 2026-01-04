@@ -40,6 +40,16 @@ const specialOffers = [
     discountPercentage: 55,
     pricePerCredit: 0.06,
   },
+  {
+    credits: 10000,
+    baseCredits: 10000,
+    bonusCredits: 0,
+    originalPrice: 800,
+    discountedPrice: 300,
+    discountPercentage: 62,
+    pricePerCredit: 0.03,
+    featured: true,
+  },
 ];
 
 interface SpecialOffersSectionProps {

@@ -13,6 +13,7 @@ interface OfferCardProps {
   pricePerCredit: number;
   index: number;
   onBuy: () => void;
+  featured?: boolean;
 }
 
 const OfferCard: React.FC<OfferCardProps> = ({
@@ -25,10 +26,15 @@ const OfferCard: React.FC<OfferCardProps> = ({
   pricePerCredit,
   index,
   onBuy,
+  featured = false,
 }) => {
   return (
     <div 
-      className="relative group rounded-2xl border border-primary/20 bg-card/80 backdrop-blur-sm p-6 shadow-card hover:shadow-card-hover hover:border-primary/40 transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+      className={`relative group rounded-2xl border bg-card/80 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-2 animate-fade-in ${
+        featured 
+          ? 'border-primary bg-gradient-to-b from-primary/10 to-transparent shadow-lg ring-2 ring-primary/30 scale-105' 
+          : 'border-primary/20 shadow-card hover:shadow-card-hover hover:border-primary/40'
+      }`}
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Glow effect on hover */}
@@ -36,9 +42,13 @@ const OfferCard: React.FC<OfferCardProps> = ({
       
       {/* Offer Badge */}
       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-        <span className="inline-flex items-center gap-1 gradient-button text-primary-foreground text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide shadow-button">
+        <span className={`inline-flex items-center gap-1 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide shadow-button ${
+          featured 
+            ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white' 
+            : 'gradient-button text-primary-foreground'
+        }`}>
           <Zap className="w-3 h-3" />
-          Oferta
+          {featured ? 'Destaque' : 'Oferta'}
         </span>
       </div>
 
@@ -49,12 +59,12 @@ const OfferCard: React.FC<OfferCardProps> = ({
         </div>
 
         {/* Credits */}
-        <div className="text-4xl font-bold text-foreground mb-1">
-          {credits}
+        <div className={`font-bold text-foreground mb-1 ${featured ? 'text-5xl' : 'text-4xl'}`}>
+          {credits.toLocaleString()}
         </div>
         <div className="text-sm text-muted-foreground mb-1">créditos</div>
         <div className="text-xs text-primary font-medium mb-4">
-          ({baseCredits} + {bonusCredits} bônus)
+          {bonusCredits > 0 ? `(${baseCredits.toLocaleString()} + ${bonusCredits.toLocaleString()} bônus)` : `${baseCredits.toLocaleString()} créditos`}
         </div>
 
         {/* Pricing */}
