@@ -69,7 +69,7 @@ const SpecialOffersSection: React.FC<SpecialOffersSectionProps> = ({ onBuy }) =>
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {specialOffers.map((offer, index) => (
             <OfferCard 
               key={offer.credits} 
