@@ -6,60 +6,60 @@
 
 @layer base {
   :root {
-    --background: 240 10% 6%;
+    --background: 220 25% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 10%;
+    --card: 220 25% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 10%;
+    --popover: 220 25% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 280 100% 70%;
+    --primary: 270 100% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 100% 65%;
+    --secondary: 280 80% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 5% 18%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 280 100% 70%;
+    --accent: 270 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5% 20%;
-    --input: 240 5% 20%;
-    --ring: 280 100% 70%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 270 100% 65%;
 
     --radius: 0.75rem;
 
-    /* Aurora colors */
-    --purple: 280 100% 70%;
-    --purple-light: 280 100% 80%;
-    --purple-dark: 280 100% 50%;
-    --pink: 320 100% 65%;
-    --pink-light: 320 100% 80%;
-    --violet: 260 100% 65%;
-    --success: 142 76% 45%;
-    --success-light: 142 76% 90%;
+    /* Purple theme colors */
+    --purple: 270 100% 65%;
+    --purple-light: 270 100% 75%;
+    --purple-dark: 270 100% 50%;
+    --pink: 290 80% 60%;
+    --pink-light: 290 80% 75%;
+    --violet: 280 90% 60%;
+    --success: 160 80% 45%;
+    --success-light: 160 80% 90%;
     
     /* Gradients */
-    --gradient-text: linear-gradient(135deg, hsl(280 100% 70%) 0%, hsl(320 100% 65%) 100%);
-    --gradient-button: linear-gradient(135deg, hsl(280 100% 70%) 0%, hsl(320 100% 65%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(280 100% 70% / 0.1) 0%, hsl(320 100% 65% / 0.05) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(280 100% 70% / 0.2) 0%, transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(270 100% 65%) 0%, hsl(290 80% 60%) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(270 100% 65%) 0%, hsl(290 80% 60%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(270 100% 65% / 0.1) 0%, hsl(290 80% 60% / 0.05) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(270 100% 65% / 0.2) 0%, transparent 70%);
 
-    --sidebar-background: 240 10% 8%;
+    --sidebar-background: 220 25% 10%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 280 100% 70%;
+    --sidebar-primary: 270 100% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent: 220 20% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 5% 20%;
-    --sidebar-ring: 280 100% 70%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 270 100% 65%;
   }
 }
 
@@ -91,7 +91,7 @@
   }
 
   .glow-effect {
-    box-shadow: 0 0 60px hsl(280 100% 70% / 0.3), 0 0 100px hsl(320 100% 65% / 0.2);
+    box-shadow: 0 0 60px hsl(270 100% 65% / 0.3), 0 0 100px hsl(290 80% 60% / 0.2);
   }
 
   .animate-float {
@@ -124,16 +124,16 @@
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, hsl(280 100% 70% / 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, hsl(320 100% 65% / 0.2), transparent),
-    radial-gradient(1px 1px at 90px 40px, hsl(260 100% 65% / 0.4), transparent),
-    radial-gradient(2px 2px at 130px 80px, hsl(280 100% 70% / 0.3), transparent),
-    radial-gradient(1px 1px at 160px 120px, hsl(320 100% 65% / 0.3), transparent),
-    radial-gradient(2px 2px at 200px 50px, hsl(280 100% 70% / 0.2), transparent),
-    radial-gradient(1px 1px at 250px 90px, hsl(260 100% 65% / 0.4), transparent),
-    radial-gradient(2px 2px at 300px 130px, hsl(320 100% 65% / 0.3), transparent),
-    radial-gradient(1px 1px at 350px 60px, hsl(280 100% 70% / 0.3), transparent),
-    radial-gradient(2px 2px at 400px 100px, hsl(260 100% 65% / 0.2), transparent);
+    radial-gradient(2px 2px at 20px 30px, hsl(270 100% 65% / 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, hsl(290 80% 60% / 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, hsl(280 90% 60% / 0.4), transparent),
+    radial-gradient(2px 2px at 130px 80px, hsl(270 100% 65% / 0.3), transparent),
+    radial-gradient(1px 1px at 160px 120px, hsl(290 80% 60% / 0.3), transparent),
+    radial-gradient(2px 2px at 200px 50px, hsl(270 100% 65% / 0.2), transparent),
+    radial-gradient(1px 1px at 250px 90px, hsl(280 90% 60% / 0.4), transparent),
+    radial-gradient(2px 2px at 300px 130px, hsl(290 80% 60% / 0.3), transparent),
+    radial-gradient(1px 1px at 350px 60px, hsl(270 100% 65% / 0.3), transparent),
+    radial-gradient(2px 2px at 400px 100px, hsl(280 90% 60% / 0.2), transparent);
   background-size: 450px 200px;
   animation: stars-float 20s linear infinite;
   pointer-events: none;
@@ -152,7 +152,7 @@
   width: 100%;
   max-width: 800px;
   height: 400px;
-  background: radial-gradient(ellipse at center top, hsl(280 100% 70% / 0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center top, hsl(270 100% 65% / 0.15) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -174,10 +174,10 @@
 
 @keyframes glow {
   0%, 100% { 
-    box-shadow: 0 0 20px hsl(280 100% 70% / 0.4), 0 0 40px hsl(320 100% 65% / 0.2);
+    box-shadow: 0 0 20px hsl(270 100% 65% / 0.4), 0 0 40px hsl(290 80% 60% / 0.2);
   }
   50% { 
-    box-shadow: 0 0 30px hsl(280 100% 70% / 0.6), 0 0 60px hsl(320 100% 65% / 0.3);
+    box-shadow: 0 0 30px hsl(270 100% 65% / 0.6), 0 0 60px hsl(290 80% 60% / 0.3);
   }
 }
 
