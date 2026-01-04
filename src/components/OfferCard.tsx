@@ -32,7 +32,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
     <div 
       className={`relative group rounded-2xl border bg-card/80 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-2 animate-fade-in ${
         featured 
-          ? 'border-primary bg-gradient-to-b from-primary/10 to-transparent shadow-lg ring-2 ring-primary/30 scale-105' 
+          ? 'border-primary bg-gradient-to-b from-primary/10 to-transparent shadow-lg ring-2 ring-primary/30' 
           : 'border-primary/20 shadow-card hover:shadow-card-hover hover:border-primary/40'
       }`}
       style={{ animationDelay: `${index * 100}ms` }}
@@ -59,7 +59,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
         </div>
 
         {/* Credits */}
-        <div className={`font-bold text-foreground mb-1 ${featured ? 'text-5xl' : 'text-4xl'}`}>
+        <div className="text-4xl font-bold text-foreground mb-1">
           {credits.toLocaleString()}
         </div>
         <div className="text-sm text-muted-foreground mb-1">créditos</div>
