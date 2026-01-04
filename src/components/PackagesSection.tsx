@@ -17,18 +17,15 @@ interface PackagesSectionProps {
 
 const PackagesSection: React.FC<PackagesSectionProps> = ({ onBuy }) => {
   return (
-    <section className="py-16 md:py-24 relative">
+    <section className="py-12 md:py-16">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Escolha seu <span className="text-gradient-primary">pacote</span>
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            Outros <span className="text-primary">Pacotes</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Todos os pacotes incluem créditos oficiais Lovable com entrega automática via WhatsApp.
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 max-w-4xl mx-auto">
           {packages.map((pkg, index) => (
             <PackageCard 
               key={pkg.credits} 
@@ -40,15 +37,15 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ onBuy }) => {
         </div>
 
         {/* WhatsApp CTA */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8">
           <a 
             href="https://wa.me/558499889568?text=Olá! Acabei de efetuar uma compra de créditos Lovable."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm md:text-base hover:bg-emerald-500/20 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm hover:bg-emerald-500/20 transition-colors"
           >
-            <MessageCircle className="w-5 h-5 flex-shrink-0" />
-            <span>Após efetuar a compra, nos chame no WhatsApp com o comprovante e o valor de créditos</span>
+            <MessageCircle className="w-4 h-4" />
+            <span>Após a compra, envie o comprovante no WhatsApp</span>
           </a>
         </div>
       </div>

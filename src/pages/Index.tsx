@@ -3,8 +3,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SpecialOffersSection from "@/components/SpecialOffersSection";
 import PackagesSection from "@/components/PackagesSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import FAQSection from "@/components/FAQSection";
 import PixPaymentModal from "@/components/PixPaymentModal";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import PromoBanner from "@/components/PromoBanner";
@@ -19,19 +17,17 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background stars-bg">
+    <div className="min-h-screen bg-background">
       <PromoBanner />
       <Header />
       <main>
         <HeroSection />
         <SpecialOffersSection onBuy={handleBuyCredits} />
         <PackagesSection onBuy={handleBuyCredits} />
-        <HowItWorksSection />
-        <FAQSection />
       </main>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border/30">
+      <footer className="py-6 border-t border-border/30">
         <div className="container text-center">
           <p className="text-sm text-muted-foreground">
             © 2024 lovablecreditos. Todos os direitos reservados.
